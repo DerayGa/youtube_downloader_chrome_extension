@@ -344,7 +344,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      $.get( 'http://www.youtube.com/get_video_info?video_id=' + video_id, function( data ) {
+      $.get( 'http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=' + video_id, function( data ) {
+        console.log(data)
         //3. Parse link for download
         YouTubeParser.getYouTubeUrl(data);
       });
