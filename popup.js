@@ -138,7 +138,7 @@ YouTubeParser = {
 
     if (dllinks.length > 0) {
       div_dl = document.createElement('div');
-      $(div_dl).html(dllinks).css('padding', '7px 0 0 0').attr('id', 'result_div');
+      $(div_dl).html(dllinks).attr('id', 'result_div');
       $('#downloadInfo').addClass('wide');
       $('#downloadInfo').append(div_dl);
     } else {
