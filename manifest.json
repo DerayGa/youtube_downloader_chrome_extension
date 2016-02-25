@@ -15,7 +15,7 @@
       "19": "icons/icon19.png",
       "38": "icons/icon38.png"
     },
-    "default_popup": "download.html"
+    "default_popup": "popup.html"
   },
   "permissions": [
     "*://*.youtube.com/",

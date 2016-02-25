@@ -7,9 +7,30 @@
  * last update: 2006/5/6 16:18
  */
 
+body{
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+  height: 30px;
+}
+
 body, body *{
 	font-family:Tahoma;
 	font-size:10pt;
+}
+
+#downloadInfo{
+  font-weight:bold;
+  padding:7px 0 7px 7px;
+  width: 150px;
+}
+
+#downloadInfo.wide{
+  width: 470px;
+}
+
+#result_div{
+	padding: 7px 0 0 0;
 }
 
 img{
@@ -128,10 +149,6 @@ div.setcenter{
 	margin-top:25px;
 }
 
-textarea#outputfield{
-	vertical-align:middle;
-	width:350px;
-}
 
 div#errormsg{
 	color:#f00;
@@ -157,16 +174,6 @@ div#errormsg{
 	margin:auto;
 	text-align:left;
 	width:550px;
-	white-space:nowrap;
-	overflow:visible;
-}
-
-#inputform{
-	margin-left:0;
-	margin-right:0;
-	margin:auto;
-	text-align:left;
-	width:600px;
 	white-space:nowrap;
 	overflow:visible;
 }

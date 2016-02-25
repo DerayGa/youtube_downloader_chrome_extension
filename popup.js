@@ -103,7 +103,6 @@ YouTubeParser = {
       }
     }
 
-    console.log(dllinks)
     if (webmlinks.length > 0) {
       if (dllinks.length > 0) {
         dllinks += '<br />';
@@ -139,9 +138,11 @@ YouTubeParser = {
 
     if (dllinks.length > 0) {
       div_dl = document.createElement('div');
-      $(div_dl).html(dllinks).css('padding', '7px 0 0 0');
-      $(div_dl).attr('id', 'result_div');
+      $(div_dl).html(dllinks).css('padding', '7px 0 0 0').attr('id', 'result_div');
+      $('#downloadInfo').addClass('wide');
       $('#downloadInfo').append(div_dl);
+    } else {
+      videoNotFound();
     }
   },
 
@@ -345,7 +346,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       $.get( 'http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=' + video_id, function( data ) {
-        console.log(data)
         //3. Parse link for download
         YouTubeParser.getYouTubeUrl(data);
       });
