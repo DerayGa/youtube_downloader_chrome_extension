@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       //2. using AJAX get video info via id
-      //http://www.youtube.com/get_video_info?video_id=hzbp4QgBgho
+      //http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=hzbp4QgBgho
       if(!video_id){
         videoNotFound();
         return;

@@ -9,4 +9,8 @@ reference Kej's FLV Retriever
 http://kej.tw/flvretriever/
 
 
+## Available on Chrome Web Store
+[https://chrome.google.com/webstore/detail/youtube-downloader](https://chrome.google.com/webstore/detail/youtube-downloader/cdfohfdbcpkphkchoiodmnkcpafbcebk?hl=en-GB)
+![result.png](https://raw.githubusercontent.com/DerayGa/youtube_downloader_chrome_extension/master/images/store.png)
+
 ![result.png](https://raw.githubusercontent.com/DerayGa/youtube_downloader_chrome_extension/master/images/result.png)
