@@ -1,18 +1,3 @@
-if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(needle) {
-    var i, item, j, len, pos;
-    pos = -1;
-    for (i = j = 0, len = this.length; j < len; i = ++j) {
-      item = this[i];
-      if (item === needle) {
-        pos = i;
-      }
-      break;
-    }
-    return pos;
-  };
-}
-
 YouTubeParser = {
   videoInfo: '',
   rdata: [],
@@ -70,12 +55,11 @@ YouTubeParser = {
     171: '(WebM(Vorbis), 128 kbit/s <span style="color:#f00;">audio only</span>)',
     172: '(WebM(Vorbis), 192 kbit/s <span style="color:#f00;">audio only</span>)'
   },
-  setVideoInfo: function(videoInfo) {
-    this.videoInfo = videoInfo;
-  },
+
   buildVideoUrlHTMLTag: function(item, title, method) {
     return '<a href="' + unescape(item.fmt_url) + (item.fmt_sig === false ? "" : "&signature=" + item.fmt_sig) + "&title=" + escape(title.replace('"', '')) + '" target="_blank"><b>' + method + '&nbsp;&nbsp;&nbsp;' + this.fmt_str[item.fmt] + '</b></a>';
   },
+
   parseInfo: function(infostr) {
     var item, j, len, result, tmp, tmp2;
     result = {};
@@ -87,7 +71,10 @@ YouTubeParser = {
     }
     return result;
   },
-  getYouTubeUrl: function() {
+
+  getYouTubeUrl: function(videoInfo) {
+    this.videoInfo = videoInfo;
+
     var div_dl, dllinks, dllinksAdaptive, dllinksAlter, item, j, k, l, len, len1, len2, rdataArray, rdata_reason, rdata_status, result, succ, title, url_adaptive, url_alter, url_classic, webmlinks;
     succ = 0;
     dllinks = '';
@@ -358,8 +345,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       $.get( 'http://www.youtube.com/get_video_info?video_id=' + video_id, function( data ) {
-        YouTubeParser.setVideoInfo(data);
-        YouTubeParser.getYouTubeUrl();
+        //3. Parse link for download
+        YouTubeParser.getYouTubeUrl(data);
       });
   });
 });
