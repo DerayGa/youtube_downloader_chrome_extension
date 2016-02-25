@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Youtube Downloader",
+  "description": "Download Youtube Video Easy",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "icons": {
+    "16": "icon/16.png",
+    "48": "icon/48.png",
+    "128": "icon/128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icon/19.png",
+      "38": "icon/38.png"
+    },
+    "default_popup": "download.html"
+  },
+  "permissions": [
+    "*://*.youtube.com/",
+    "cookies",
+    "activeTab",
+    "tabs"
+  ]
+}

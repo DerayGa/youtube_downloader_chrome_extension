@@ -1,0 +1,182 @@
+/**
+ * project:     GooTube FLV Retriever
+ * file:        style.css
+ * desc:        cascading style sheet document
+ * author:      Kej<kejjang@gmail.com>
+ *
+ * last update: 2006/5/6 16:18
+ */
+
+body, body *{
+	font-family:Tahoma;
+	font-size:10pt;
+}
+
+img{
+	vertical-align:middle;
+}
+
+h1{
+	font-weight:bold;
+	color:#375cf0;
+	font-size:24pt;
+}
+
+.h1google1{
+	font-weight:bold;
+	font-size:24pt;
+	color:#0d30d7;
+}
+
+.h1google2{
+	font-weight:bold;
+	font-size:24pt;
+	color:#f00;
+}
+
+.h1google3{
+	font-weight:bold;
+	font-size:24pt;
+	color:#fedd25;
+}
+
+.h1tube{
+	font-weight:bold;
+	font-size:24pt;
+	background:#f00;
+	color:#fff;
+}
+a:link, a:visited{
+	color:#00f;
+	text-decoration:none;
+}
+
+a:hover{
+	background:#ff9;
+}
+
+a:active{
+	color:#f00;
+	background:#fff;
+}
+
+.class1{
+	background:#e5ecf9;
+	border-bottom:1px solid #e5ecf9;
+	border-left:1px solid #e5ecf9;
+	border-right:1px solid #e5ecf9;
+	border-top:solid 1px #375cf0;
+	padding:10px;
+}
+
+.class2{
+	height:1px;
+	background:#375cf0;
+	border-bottom:0px solid #fff;
+	border-left:0px solid #fff;
+	border-right:0px solid #fff;
+	border-top:solid 1px #375cf0;
+}
+
+.class2t{
+	margin-top:50px !important;
+	margin-top:0px;
+	height:1px;
+	background:#375cf0;
+	border-bottom:0px solid #fff;
+	border-left:0px solid #fff;
+	border-right:0px solid #fff;
+	border-top:solid 1px #375cf0;
+}
+
+div.row {
+	clear: both;
+	padding-top: 10px;
+	width:350px;
+	margin:0px auto;
+}
+
+div.row span.label {
+	float: left;
+	width: 100px;
+	text-align: right;
+ }
+
+div.row span.formw {
+	float: right;
+	width: 235px;
+	text-align: left;
+}
+
+div.setcenter{
+	text-align:center;
+}
+
+#btnsubmit{
+	margin-left:20px;
+}
+
+.ml10{
+	margin-left:10px;
+}
+
+.mt10{
+	margin-top:10px;
+}
+
+.mt25{
+	margin-top:25px;
+}
+
+textarea#outputfield{
+	vertical-align:middle;
+	width:350px;
+}
+
+div#errormsg{
+	color:#f00;
+	font-weight:bold;
+}
+
+.attention{
+	color:#f00;
+	font-weight:bold;
+}
+
+.tdnone{
+	text-decoration:none;
+}
+
+.invisible{
+	display:none;
+}
+
+#msgs{
+	margin-left:0;
+	margin-right:0;
+	margin:auto;
+	text-align:left;
+	width:550px;
+	white-space:nowrap;
+	overflow:visible;
+}
+
+#inputform{
+	margin-left:0;
+	margin-right:0;
+	margin:auto;
+	text-align:left;
+	width:600px;
+	white-space:nowrap;
+	overflow:visible;
+}
+
+#resultarea{
+	margin-left:0;
+	margin-right:0;
+	margin:auto;
+	text-align:left;
+	width:600px;
+	white-space:nowrap;
+	overflow:visible;
+}
