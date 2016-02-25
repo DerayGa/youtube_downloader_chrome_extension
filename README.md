@@ -9,4 +9,4 @@ reference Kej's FLV Retriever
 http://kej.tw/flvretriever/
 
 
-![result.png](https://raw.githubusercontent.com/DerayGa/youtube_downloader_chrome_extension/master/result/result.png)
+![result.png](https://raw.githubusercontent.com/DerayGa/youtube_downloader_chrome_extension/master/images/result.png)
