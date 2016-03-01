@@ -52,7 +52,7 @@ h1{
 .h1google2{
 	font-weight:bold;
 	font-size:24pt;
-	color:#D32F2F;
+	color:#F44336;
 }
 
 .h1google3{
@@ -64,7 +64,7 @@ h1{
 .h1tube{
 	font-weight:bold;
 	font-size:24pt;
-	background:#D32F2F;
+	background:#F44336;
 	color:#fff;
 }
 a {
@@ -81,7 +81,7 @@ a:hover{
 }
 
 a:active{
-	color:#D32F2F;
+	color:#F44336;
 	background:#fff;
 }
 .small a{
@@ -90,11 +90,11 @@ a:active{
 
 .desc {
 	font-size: 12px;
-	color:#D32F2F;
+	color:#F44336;
 }
 .small .desc {
 	font-size: 12px;
-	color:#1976D2;
+	color:#F44336;
 }
 .class1{
 	background:#e5ecf9;
@@ -166,12 +166,12 @@ div.setcenter{
 
 
 div#errormsg{
-	color:#D32F2F;
+	color:#F44336;
 	font-weight:bold;
 }
 
 .attention{
-	color:#D32F2F;
+	color:#F44336;
 	font-weight:bold;
 }
 

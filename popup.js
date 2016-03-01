@@ -25,35 +25,35 @@ YouTubeParser = {
     100: '360p&nbsp;&nbsp;&nbsp;(WebM(VP8), 640 x 360, Stereo 44KHz Vorbis)',
     101: '480p&nbsp;&nbsp;&nbsp;(WebM(VP8), 854 x 480, Stereo 44KHz Vorbis)',
     102: '720p&nbsp;&nbsp;&nbsp;(WebM(VP8), 1280 x 720, Stereo 44KHz Vorbis)',
-    133: '240p&nbsp;&nbsp;&nbsp;(MP4(H.264), 426 x 240, <span style="color:#D32F2F;">video only, no audio</span>)',
-    134: '360p&nbsp;&nbsp;&nbsp;(MP4(H.264), 640 x 360, <span style="color:#D32F2F;">video only, no audio</span>)',
-    135: '480p&nbsp;&nbsp;&nbsp;(MP4(H.264), 854 x 480, <span style="color:#D32F2F;">video only, no audio</span>)',
-    136: '720p&nbsp;&nbsp;&nbsp;(MP4(H.264), 1280 x 720, <span style="color:#D32F2F;">video only, no audio</span>)',
-    137: '1080p&nbsp;&nbsp;&nbsp;(MP4(H.264), 1920 x 1080, <span style="color:#D32F2F;">video only, no audio</span>)',
-    138: '3072p&nbsp;&nbsp;&nbsp;(MP4(H.264), 4096 x 3072, <span style="color:#D32F2F;">video only, no audio</span>)',
-    160: '144p&nbsp;&nbsp;&nbsp;(MP4(H.264), 256 x 144, <span style="color:#D32F2F;">video only, no audio</span>)',
-    264: '1440p&nbsp;&nbsp;&nbsp;(MP4(H.264), 2560 x 1440, <span style="color:#D32F2F;">video only, no audio</span>)',
-    266: '2160p&nbsp;&nbsp;&nbsp;(MP4(H.264), 3840 x 2160, <span style="color:#D32F2F;">video only, no audio</span>)',
-    298: '720p HFR&nbsp;&nbsp;&nbsp;(MP4(H.264), 1280 x 720 HFR, <span style="color:#D32F2F;">video only, no audio</span>)',
-    299: '1080p HFR&nbsp;&nbsp;&nbsp;(MP4(H.264), 1920 x 1080 HFR, <span style="color:#D32F2F;">video only, no audio</span>)',
-    242: '240p&nbsp;&nbsp;&nbsp;(WebM(VP9), 426 x 240, <span style="color:#D32F2F;">video only, no audio</span>)',
-    243: '360p&nbsp;&nbsp;&nbsp;(WebM(VP9), 640 x 360, <span style="color:#D32F2F;">video only, no audio</span>)',
-    244: '480p&nbsp;&nbsp;&nbsp;(WebM(VP9), 854 x 480, <span style="color:#D32F2F;">video only, no audio</span>)',
-    247: '720p&nbsp;&nbsp;&nbsp;(WebM(VP9), 1280 x 720, <span style="color:#D32F2F;">video only, no audio</span>)',
-    248: '1080p&nbsp;&nbsp;&nbsp;(WebM(VP9), 1920 x 1080, <span style="color:#D32F2F;">video only, no audio</span>)',
-    271: '1440p&nbsp;&nbsp;&nbsp;(WebM(VP9), 2560 x 1440, <span style="color:#D32F2F;">video only, no audio</span>)',
-    272: '2160p&nbsp;&nbsp;&nbsp;(WebM(VP9), 3840 x 2160, <span style="color:#D32F2F;">video only, no audio</span>)',
-    278: '144p&nbsp;&nbsp;&nbsp;(WebM(VP9), 256 x 144, <span style="color:#D32F2F;">video only, no audio</span>)',
-    302: '720p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 1280 x 720 HFR, <span style="color:#D32F2F;">video only, no audio</span>)',
-    303: '1080p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 1920 x 1080 HFR, <span style="color:#D32F2F;">video only, no audio</span>)',
-    308: '1440p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 2560 x 1440 HFR, <span style="color:#D32F2F;">video only, no audio</span>)',
-    313: '2160&nbsp;&nbsp;&nbsp;(WebM(VP9), 3840 x 2160, <span style="color:#D32F2F;">video only, no audio</span>)',
-    315: '2160p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 3840 x 2160 HFR, <span style="color:#D32F2F;">video only, no audio</span>)',
-    139: '(M4A(AAC), 48 kbit/s <span style="color:#D32F2F;">audio only</span>)',
-    140: '(M4A(AAC), 128 kbit/s <span style="color:#D32F2F;">audio only</span>)',
-    141: '(M4A(AAC), 256 kbit/s <span style="color:#D32F2F;">audio only</span>)',
-    171: '(WebM(Vorbis), 128 kbit/s <span style="color:#D32F2F;">audio only</span>)',
-    172: '(WebM(Vorbis), 192 kbit/s <span style="color:#D32F2F;">audio only</span>)'
+    133: '240p&nbsp;&nbsp;&nbsp;(MP4(H.264), 426 x 240, <span">video only, no audio</span>)',
+    134: '360p&nbsp;&nbsp;&nbsp;(MP4(H.264), 640 x 360, <span">video only, no audio</span>)',
+    135: '480p&nbsp;&nbsp;&nbsp;(MP4(H.264), 854 x 480, <span">video only, no audio</span>)',
+    136: '720p&nbsp;&nbsp;&nbsp;(MP4(H.264), 1280 x 720, <span">video only, no audio</span>)',
+    137: '1080p&nbsp;&nbsp;&nbsp;(MP4(H.264), 1920 x 1080, <span">video only, no audio</span>)',
+    138: '3072p&nbsp;&nbsp;&nbsp;(MP4(H.264), 4096 x 3072, <span">video only, no audio</span>)',
+    160: '144p&nbsp;&nbsp;&nbsp;(MP4(H.264), 256 x 144, <span">video only, no audio</span>)',
+    264: '1440p&nbsp;&nbsp;&nbsp;(MP4(H.264), 2560 x 1440, <span">video only, no audio</span>)',
+    266: '2160p&nbsp;&nbsp;&nbsp;(MP4(H.264), 3840 x 2160, <span">video only, no audio</span>)',
+    298: '720p HFR&nbsp;&nbsp;&nbsp;(MP4(H.264), 1280 x 720 HFR, <span">video only, no audio</span>)',
+    299: '1080p HFR&nbsp;&nbsp;&nbsp;(MP4(H.264), 1920 x 1080 HFR, <span">video only, no audio</span>)',
+    242: '240p&nbsp;&nbsp;&nbsp;(WebM(VP9), 426 x 240, <span">video only, no audio</span>)',
+    243: '360p&nbsp;&nbsp;&nbsp;(WebM(VP9), 640 x 360, <span">video only, no audio</span>)',
+    244: '480p&nbsp;&nbsp;&nbsp;(WebM(VP9), 854 x 480, <span">video only, no audio</span>)',
+    247: '720p&nbsp;&nbsp;&nbsp;(WebM(VP9), 1280 x 720, <span">video only, no audio</span>)',
+    248: '1080p&nbsp;&nbsp;&nbsp;(WebM(VP9), 1920 x 1080, <span">video only, no audio</span>)',
+    271: '1440p&nbsp;&nbsp;&nbsp;(WebM(VP9), 2560 x 1440, <span">video only, no audio</span>)',
+    272: '2160p&nbsp;&nbsp;&nbsp;(WebM(VP9), 3840 x 2160, <span">video only, no audio</span>)',
+    278: '144p&nbsp;&nbsp;&nbsp;(WebM(VP9), 256 x 144, <span">video only, no audio</span>)',
+    302: '720p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 1280 x 720 HFR, <span">video only, no audio</span>)',
+    303: '1080p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 1920 x 1080 HFR, <span">video only, no audio</span>)',
+    308: '1440p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 2560 x 1440 HFR, <span">video only, no audio</span>)',
+    313: '2160&nbsp;&nbsp;&nbsp;(WebM(VP9), 3840 x 2160, <span">video only, no audio</span>)',
+    315: '2160p HFR&nbsp;&nbsp;&nbsp;(WebM(VP9), 3840 x 2160 HFR, <span">video only, no audio</span>)',
+    139: '(M4A(AAC), 48 kbit/s <span">audio only</span>)',
+    140: '(M4A(AAC), 128 kbit/s <span">audio only</span>)',
+    141: '(M4A(AAC), 256 kbit/s <span">audio only</span>)',
+    171: '(WebM(Vorbis), 128 kbit/s <span">audio only</span>)',
+    172: '(WebM(Vorbis), 192 kbit/s <span">audio only</span>)'
   },
 
   buildVideoUrlHTMLTag: function(item, title, method) {
@@ -125,7 +125,7 @@ YouTubeParser = {
       }
     }
     /*if (dllinksAlter.length > 0) {
-      dllinks += '<br /><br /><span style="color:#D32F2F; font-weight:bold;">sadly 1080p\'s dead again...</span><br /><del>1080p & some other formats redirect download are back online and <span style="color:#D32F2F;font-weight:bold;">testing</span>:<br />';
+      dllinks += '<br /><br /><span font-weight:bold;">sadly 1080p\'s dead again...</span><br /><del>1080p & some other formats redirect download are back online and <spanfont-weight:bold;">testing</span>:<br />';
       dllinks += dllinksAlter + '</del>';
     }*/
     for (l = 0, len2 = url_adaptive.length; l < len2; l++) {
