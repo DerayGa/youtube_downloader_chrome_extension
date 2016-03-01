@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Hämta",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Videon inte hittade",
+    "description": "Video not found"
+  }
+}

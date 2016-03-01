@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Na stiahnutie",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Video nebol nájdený",
+    "description": "Video not found"
+  }
+}

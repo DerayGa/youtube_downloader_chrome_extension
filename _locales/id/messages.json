@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Men-download",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Video tidak ditemukan",
+    "description": "Video not found"
+  }
+}

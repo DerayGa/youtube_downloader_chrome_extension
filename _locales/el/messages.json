@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Λήψη",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Δεν βρέθηκαν βίντεο",
+    "description": "Video not found"
+  }
+}

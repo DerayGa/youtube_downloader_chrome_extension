@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Lejupielādēt",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Video nevar atrast",
+    "description": "Video not found"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "להורדה",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "הסרטונים לא נמצא",
+    "description": "Video not found"
+  }
+}

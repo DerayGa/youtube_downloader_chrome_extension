@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Travnato gričevje",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Video ni mogoče najti",
+    "description": "Video not found"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Скачать",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Видео не найдены",
+    "description": "Video not found"
+  }
+}

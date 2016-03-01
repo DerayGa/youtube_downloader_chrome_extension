@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "ダウンロード",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "ビデオが見つかりませんでした。",
+    "description": "Video not found"
+  }
+}

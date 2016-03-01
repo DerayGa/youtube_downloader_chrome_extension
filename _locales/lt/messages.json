@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Parsisiųsti",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Video nerastas",
+    "description": "Video not found"
+  }
+}

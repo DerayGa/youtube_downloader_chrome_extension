@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "다운로드",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "비디오를 찾을 수 없습니다",
+    "description": "Video not found"
+  }
+}

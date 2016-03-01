@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Lataa",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Video ei löydy",
+    "description": "Video not found"
+  }
+}

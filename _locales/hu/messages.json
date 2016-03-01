@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "Letöltés",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "Videóinak nem található",
+    "description": "Video not found"
+  }
+}
