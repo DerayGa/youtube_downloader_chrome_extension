@@ -63,9 +63,9 @@ YouTubeParser = {
     link.shift();
 
     return '<a href="' + unescape(item.fmt_url) +
-      (item.fmt_sig === false ? "" : "&signature=" + item.fmt_sig) +
-      "&title=" + escape(title.replace('"', '')) + '" target="_blank">' +
-      method + '&nbsp;&nbsp;&nbsp;' + format +
+      ((item.fmt_sig === false ? "" : "&signature=") + item.fmt_sig) +
+      '" target="_blank">' +
+      '<i class="fa fa-download"> ' + method + '</i>&nbsp;&nbsp;&nbsp;' + format +
       ((link.length) ? ('<div class="desc">(' + link.join(',') + '</div>') : '') + '</a>';
   },
 
@@ -114,7 +114,7 @@ YouTubeParser = {
           dllinks += vlink;
         } else {
           if (dllinksAdaptive.length > 0) {
-            dllinksAdaptive += '<br />';
+            //dllinksAdaptive += '<br />';
           }
           dllinksAdaptive += vlink;
         }
@@ -141,7 +141,7 @@ YouTubeParser = {
     for (l = 0, len2 = url_adaptive.length; l < len2; l++) {
       item = url_adaptive[l];
       if (dllinksAdaptive.length > 0) {
-        dllinksAdaptive += '<br />';
+        //dllinksAdaptive += '<br />';
       }
       dllinksAdaptive += this.buildVideoUrlHTMLTag(item, title, 'Download');
     }
