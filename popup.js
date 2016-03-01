@@ -147,7 +147,7 @@ YouTubeParser = {
     }
     if (dllinksAdaptive.length > 0) {
       if (dllinks.length > 0) {
-        dllinks += '<hr /><div class="small"><br />special files (separated audio and video):<br /><br />';
+        dllinks += '<hr /><div class="small">';
       }
       dllinks += dllinksAdaptive;
       dllinks += '</div>';
@@ -332,26 +332,26 @@ function videoNotFound() {
   $('#downloadInfo').html('Video not found');
 }
 
+function getQueryVariable(variable, query) {
+  if(!query)
+    return undefined;
+
+  var vars = query.split("&");
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  }
+  return undefined;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   chrome.tabs.getSelected(null, function(tab) {
     var tablink = tab.url;
     //1. get video id
     //https://www.youtube.com/watch?v=hzbp4QgBgho
-    var tmp = tablink.split('?');
-    if (tmp.length < 2) {
-      videoNotFound();
-      return;
-    }
-
-    tmp = tmp[1].split('&');
-    var video_id;
-    $.each(tmp, function(index, value) {
-      if (value.indexOf('v=') != 0)
-        return;
-      video_id = value.replace('v=', '');
-
-      return false;
-    });
+    var video_id = getQueryVariable('v', tablink.split('?')[1]);
 
     //2. using AJAX get video info via id
     //http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=hzbp4QgBgho
