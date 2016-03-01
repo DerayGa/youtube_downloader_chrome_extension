@@ -61,11 +61,13 @@ YouTubeParser = {
     link = link.split(',');
     var format = link[0].replace('(', '');
     link.shift();
+    var dl = unescape(item.fmt_url);
 
-    return '<a href="' + unescape(item.fmt_url) +
-      ((item.fmt_sig === false ? "" : "&signature=") + item.fmt_sig) +
-      '" target="_blank">' +
-      '<i class="fa fa-download"> ' + method + '</i>&nbsp;&nbsp;&nbsp;' + format +
+    if(item.fmt_sig)
+      dl += ('&signature=' + item.fmt_sig );
+    return '<a href="' + dl + '"' + ' download="' + dl + '"' +
+      '>' +
+      '<div class="dl"><i class="fa fa-download" /> ' + method + '&nbsp;&nbsp;&nbsp;' + format + '</div>' +
       ((link.length) ? ('<div class="desc">(' + link.join(',') + '</div>') : '') + '</a>';
   },
 
@@ -331,7 +333,7 @@ YouTubeParser = {
 
 function videoNotFound() {
   var videoNotFound = chrome.i18n.getMessage("videoNotFound");
-  $('#downloadInfo').html(videoNotFound);
+  $('#downloadInfo').html(videoNotFound).addClass('errormsg');
 }
 
 function getQueryVariable(variable, query) {

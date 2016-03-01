@@ -10,26 +10,24 @@
 body{
   margin: 0px;
   padding: 0px;
-  width: auto;
   height: 30px;
   overflow: hidden;
 }
 
 body, body *{
-	font-family:Tahoma;
-	font-size:10pt;
+	font-family:arial;
 }
 
 #downloadInfo{
-  font-weight:bold;
-  padding:7px 0px 0px 0px;
-  width: 150px;
+  min-width: 250px;
+  display: inline-block;
 }
 
-#downloadInfo.wide{
-  width: 430px;
+#downloadInfo .dl{
+	font-weight: bold;
+  display: inline;
+  white-space: nowrap;
 }
-
 img{
 	vertical-align:middle;
 }
@@ -67,6 +65,8 @@ h1{
 a {
 	font-size: 24px;
 	display:block;
+	padding: 3px 5px;
+	width:100%;
 }
 a:link, a:visited{
 	color:#1976D2;
@@ -78,32 +78,33 @@ a:hover{
 }
 
 a:active{
-	color:#F44336;
+	color:#555;
 	background:#fff;
 }
 
 .small{
 	width:100%;
-	height:145px;
+	height:135px;
 
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 .small:hover{
   overflow-y: auto;
 }
 .small a{
-	font-size: 12px;
+	font-size: 14px;
 	color:#555;
 	padding-bottom: 8px;
 }
 
 .desc {
-	font-size: 12px;
-	color:#F44336;
+	font-size: 16px;
+	color:#555;
 }
 .small .desc {
 	font-size: 12px;
-	color:#F44336;
+	color:#555;
 }
 .class1{
 	background:#e5ecf9;
@@ -174,7 +175,7 @@ div.setcenter{
 }
 
 
-div#errormsg{
+div.errormsg{
 	color:#F44336;
 	font-weight:bold;
 }
