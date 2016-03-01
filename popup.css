@@ -52,7 +52,7 @@ h1{
 .h1google2{
 	font-weight:bold;
 	font-size:24pt;
-	color:#f00;
+	color:#D32F2F;
 }
 
 .h1google3{
@@ -64,23 +64,38 @@ h1{
 .h1tube{
 	font-weight:bold;
 	font-size:24pt;
-	background:#f00;
+	background:#D32F2F;
 	color:#fff;
 }
+a {
+	font-size: 24px;
+	display:block;
+}
 a:link, a:visited{
-	color:#00f;
+	color:#1976D2;
 	text-decoration:none;
 }
 
 a:hover{
-	background:#ff9;
+	background:#FFF59D;
 }
 
 a:active{
-	color:#f00;
+	color:#D32F2F;
 	background:#fff;
 }
+.small a{
+	font-size: 12px;
+}
 
+.desc {
+	font-size: 12px;
+	color:#D32F2F;
+}
+.small .desc {
+	font-size: 12px;
+	color:#1976D2;
+}
 .class1{
 	background:#e5ecf9;
 	border-bottom:1px solid #e5ecf9;
@@ -151,12 +166,12 @@ div.setcenter{
 
 
 div#errormsg{
-	color:#f00;
+	color:#D32F2F;
 	font-weight:bold;
 }
 
 .attention{
-	color:#f00;
+	color:#D32F2F;
 	font-weight:bold;
 }
 
