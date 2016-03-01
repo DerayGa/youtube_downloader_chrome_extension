@@ -12,6 +12,7 @@ body{
   padding: 0px;
   width: auto;
   height: 30px;
+  overflow: hidden;
 }
 
 body, body *{
@@ -21,7 +22,7 @@ body, body *{
 
 #downloadInfo{
   font-weight:bold;
-  padding:7px 0 7px 7px;
+  padding:7px 0px 7px 7px;
   width: 150px;
 }
 
@@ -83,6 +84,16 @@ a:hover{
 a:active{
 	color:#F44336;
 	background:#fff;
+}
+
+.small{
+	width:100%;
+	height:200px;
+
+  overflow-y: hidden;
+}
+.small:hover{
+  overflow-y: auto;
 }
 .small a{
 	font-size: 12px;
