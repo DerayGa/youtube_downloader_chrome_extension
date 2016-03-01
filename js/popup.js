@@ -96,6 +96,7 @@ YouTubeParser = {
     url_adaptive = this.parseUrlsAdaptive(rdataArray);
     url_alter = this.parseUrlsAlter(rdataArray, url_classic, url_adaptive);
     title = this.parseTitle(rdataArray);
+    var downloadTxt = chrome.i18n.getMessage("download");
 
     for (j = 0, len = url_classic.length; j < len; j++) {
       item = url_classic[j];
@@ -105,7 +106,7 @@ YouTubeParser = {
         }
         webmlinks += this.buildVideoUrlHTMLTag(item, title, 'Watch online');*/
       } else {
-        var vlink = this.buildVideoUrlHTMLTag(item, title, 'Download');
+        var vlink = this.buildVideoUrlHTMLTag(item, title, downloadTxt);
 
         if ([18, 22, 37, 38, 82, 83, 84, 85].indexOf(parseInt(item.fmt, 10)) > -1) {
           if (dllinks.length > 0) {
@@ -131,7 +132,7 @@ YouTubeParser = {
     /*if (url_alter.length > 0) {
       for (k = 0, len1 = url_alter.length; k < len1; k++) {
         item = url_alter[k];
-        dllinksAlter += this.buildVideoUrlHTMLTag(item, title, 'Download');
+        dllinksAlter += this.buildVideoUrlHTMLTag(item, title, downloadTxt);
       }
     }*/
     /*if (dllinksAlter.length > 0) {
@@ -143,7 +144,7 @@ YouTubeParser = {
       if (dllinksAdaptive.length > 0) {
         //dllinksAdaptive += '<br />';
       }
-      dllinksAdaptive += this.buildVideoUrlHTMLTag(item, title, 'Download');
+      dllinksAdaptive += this.buildVideoUrlHTMLTag(item, title, downloadTxt);
     }
     if (dllinksAdaptive.length > 0) {
       if (dllinks.length > 0) {
@@ -329,7 +330,8 @@ YouTubeParser = {
 };
 
 function videoNotFound() {
-  $('#downloadInfo').html('Video not found');
+  var videoNotFound = chrome.i18n.getMessage("videoNotFound");
+  $('#downloadInfo').html(videoNotFound);
 }
 
 function getQueryVariable(variable, query) {

@@ -1,0 +1,10 @@
+{
+  "download": {
+    "message": "下载",
+    "description": "Download"
+  },
+  "videoNotFound": {
+    "message": "找不到视频",
+    "description": "Video not found"
+  }
+}

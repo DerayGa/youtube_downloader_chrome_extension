@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Youtube Downloader",
-  "description": "Download Youtube Video Easy",
+  "name": "YouTube Downloader",
+  "description": "Download YouTube Video Easy",
   "version": "1.4",
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "icons": {
@@ -17,6 +17,7 @@
     },
     "default_popup": "popup.html"
   },
+  "default_locale" : "en",
   "permissions": [
     "*://*.youtube.com/",
     "cookies",
