@@ -116,12 +116,12 @@ YouTubeParser = {
             dllinks += '<hr />';
           }
           dllinks += vlink;
-        } else {
-          if (dllinksAdaptive.length > 0) {
-            //dllinksAdaptive += '<br />';
-          }
-          dllinksAdaptive += vlink;
+          continue;
         }
+        if (dllinksAdaptive.length > 0) {
+          //dllinksAdaptive += '<br />';
+        }
+        dllinksAdaptive += vlink;
       }
     }
 
@@ -147,8 +147,19 @@ YouTubeParser = {
       if (dllinksAdaptive.length > 0) {
         //dllinksAdaptive += '<br />';
       }
-      dllinksAdaptive += this.buildVideoUrlHTMLTag(item, title, downloadTxt);
+
+      var vlink = this.buildVideoUrlHTMLTag(item, title, downloadTxt);
+
+      if ([140, 141].indexOf(parseInt(item.fmt, 10)) > -1){
+        if (dllinks.length > 0) {
+          dllinks += '<hr />';
+        }
+        dllinks += vlink;
+        continue;
+      }
+      dllinksAdaptive += vlink;
     }
+
     if (dllinksAdaptive.length > 0) {
       if (dllinks.length > 0) {
         dllinks += '<hr /><div class="small">';
