@@ -62,11 +62,11 @@ YouTubeParser = {
     var format = link[0].replace('(', '');
     link.shift();
 
-    return '<a href="' + unescape(item.fmt_url) + 
-    (item.fmt_sig === false ? "" : "&signature=" + item.fmt_sig) + 
-    "&title=" + escape(title.replace('"', '')) + '" target="_blank">' + 
-    method + '&nbsp;&nbsp;&nbsp;' + format +
-    ((link.length) ? ('<div class="desc">(' + link.join(',') + '</div>') : '') + '</a>';
+    return '<a href="' + unescape(item.fmt_url) +
+      (item.fmt_sig === false ? "" : "&signature=" + item.fmt_sig) +
+      "&title=" + escape(title.replace('"', '')) + '" target="_blank">' +
+      method + '&nbsp;&nbsp;&nbsp;' + format +
+      ((link.length) ? ('<div class="desc">(' + link.join(',') + '</div>') : '') + '</a>';
   },
 
   parseInfo: function(infostr) {
@@ -105,10 +105,19 @@ YouTubeParser = {
         }
         webmlinks += this.buildVideoUrlHTMLTag(item, title, 'Watch online');*/
       } else {
-        if (dllinks.length > 0) {
-          dllinks += '<hr />';
+        var vlink = this.buildVideoUrlHTMLTag(item, title, 'Download');
+
+        if ([18, 22, 37, 38, 82, 83, 84, 85].indexOf(parseInt(item.fmt, 10)) > -1) {
+          if (dllinks.length > 0) {
+            dllinks += '<hr />';
+          }
+          dllinks += vlink;
+        } else {
+          if (dllinksAdaptive.length > 0) {
+            dllinksAdaptive += '<br />';
+          }
+          dllinksAdaptive += vlink;
         }
-        dllinks += this.buildVideoUrlHTMLTag(item, title, 'Download');
       }
     }
 
@@ -118,12 +127,13 @@ YouTubeParser = {
       }
       dllinks += webmlinks;
     }*/
-    if (url_alter.length > 0) {
+
+    /*if (url_alter.length > 0) {
       for (k = 0, len1 = url_alter.length; k < len1; k++) {
         item = url_alter[k];
         dllinksAlter += this.buildVideoUrlHTMLTag(item, title, 'Download');
       }
-    }
+    }*/
     /*if (dllinksAlter.length > 0) {
       dllinks += '<br /><br /><span font-weight:bold;">sadly 1080p\'s dead again...</span><br /><del>1080p & some other formats redirect download are back online and <spanfont-weight:bold;">testing</span>:<br />';
       dllinks += dllinksAlter + '</del>';
@@ -144,10 +154,8 @@ YouTubeParser = {
     }
 
     if (dllinks.length > 0) {
-      div_dl = document.createElement('div');
-      $(div_dl).html(dllinks).attr('id', 'result_div');
       $('#downloadInfo').addClass('wide');
-      $('#downloadInfo').append(div_dl);
+      $('#downloadInfo').html(dllinks);
     } else {
       videoNotFound();
     }
@@ -320,41 +328,41 @@ YouTubeParser = {
   }
 };
 
-function videoNotFound(){
+function videoNotFound() {
   $('#downloadInfo').html('Video not found');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  chrome.tabs.getSelected(null,function(tab) {
-      var tablink = tab.url;
-      //1. get video id
-      //https://www.youtube.com/watch?v=hzbp4QgBgho
-      var tmp = tablink.split('?');
-      if(tmp.length < 2){
-        videoNotFound();
+  chrome.tabs.getSelected(null, function(tab) {
+    var tablink = tab.url;
+    //1. get video id
+    //https://www.youtube.com/watch?v=hzbp4QgBgho
+    var tmp = tablink.split('?');
+    if (tmp.length < 2) {
+      videoNotFound();
+      return;
+    }
+
+    tmp = tmp[1].split('&');
+    var video_id;
+    $.each(tmp, function(index, value) {
+      if (value.indexOf('v=') != 0)
         return;
-      }
+      video_id = value.replace('v=', '');
 
-      tmp = tmp[1].split('&');
-      var video_id;
-      $.each(tmp, function(index, value){
-        if(value.indexOf('v=') != 0)
-          return;
-        video_id = value.replace('v=', '');
+      return false;
+    });
 
-        return false;
-      });
+    //2. using AJAX get video info via id
+    //http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=hzbp4QgBgho
+    if (!video_id) {
+      videoNotFound();
+      return;
+    }
 
-      //2. using AJAX get video info via id
-      //http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=hzbp4QgBgho
-      if(!video_id){
-        videoNotFound();
-        return;
-      }
-
-      $.get( 'http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=' + video_id, function( data ) {
-        //3. Parse link for download
-        YouTubeParser.getYouTubeUrl(data);
-      });
+    $.get('http://www.youtube.com/get_video_info?eurl=http%3A%2F%2Fkej.tw%2F&sts=16849&video_id=' + video_id, function(data) {
+      //3. Parse link for download
+      YouTubeParser.getYouTubeUrl(data);
+    });
   });
 });
