@@ -3,7 +3,7 @@
 
   "name": "YouTube Downloader",
   "description": "Easiest way to download YouTube Video",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "icons": {
     "16": "icons/icon16.png",
