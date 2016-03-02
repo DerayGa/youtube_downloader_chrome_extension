@@ -63,12 +63,16 @@ YouTubeParser = {
     link.shift();
     var dl = unescape(item.fmt_url);
 
+    var type = '<i class="fa fa-film" />';
+    if([139, 140, 141, 171, 172].indexOf(parseInt(item.fmt, 10)) > -1)
+      type = '<i class="fa fa-music" />';
+
     if(item.fmt_sig)
       dl += ('&signature=' + item.fmt_sig );
     dl += '&title=' + escape(title.replace('"', ''));
 
     return '<a href="' + dl + '"' + ' download="' + dl + '" >' +
-      '<div class="dl"><i class="fa fa-download" /> ' + method + '&nbsp;&nbsp;&nbsp;' + format + '</div>' +
+      '<div class="dl"><i class="fa fa-download" /> ' + type + '&nbsp;' + method + '&nbsp;&nbsp;&nbsp;' + format + '</div>' +
       ((link.length) ? ('<div class="desc">(' + link.join(',') + '</div>') : '') + '</a>';
   },
 
