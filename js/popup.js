@@ -70,7 +70,7 @@ YouTubeParser = {
       dl += ('&signature=' + item.fmt_sig);
     dl += ('&title=' + escape(title.replace('"', '')));
 
-    return '<a href="' + dl + '"' + ' download="' + dl + '" >' +
+    return '<a href="' + dl + '"' + ' download>' +
       '<div class="dl">' + icon + '&nbsp;' + method + '&nbsp;' + format + '</div>' +
       ((link.length) ? ('<div class="desc">(' + link.join(', ') + '</div>') : '') + '</a>';
   },
