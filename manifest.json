@@ -20,8 +20,6 @@
   "default_locale" : "en",
   "permissions": [
     "*://*.youtube.com/",
-    "cookies",
-    "activeTab",
     "tabs"
   ]
 }
